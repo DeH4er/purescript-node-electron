@@ -9,6 +9,8 @@ import Effect as Effect
 
 import Node.Electron.Event as Event
 
+foreign import data IPCData :: Type
+
 -- | Attach a handler to an IPC message channel.
 foreign import on
   :: String
@@ -18,5 +20,5 @@ foreign import on
 
 foreign import handle
   :: String
-  -> (Event.Event -> Array String -> Effect.Effect Type)
+  -> (Event.Event -> Array String -> Effect.Effect IPCData)
   -> Effect.Effect Unit
