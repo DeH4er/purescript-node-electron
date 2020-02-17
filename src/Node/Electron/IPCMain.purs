@@ -1,6 +1,7 @@
 module Node.Electron.IPCMain
   ( on
   , handle
+  , IPCData
   ) where
 
 import Prelude
