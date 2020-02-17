@@ -1,6 +1,6 @@
 module Node.Electron.IPCMain
   ( on
-  , sendToHost
+  , handle
   ) where
 
 import Prelude
