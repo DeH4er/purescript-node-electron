@@ -39,7 +39,7 @@ data BrowserWindowOptions
 
 data WebPreferences
 
-webPreferences :: Options.Option BrowserWindowOptions WebPreferences
+webPreferences :: Options.Option BrowserWindowOptions (Options.Option WebPreferences)
 webPreferences = Options.opt "webPreferences"
 
 nodeIntegration :: Options.Option WebPreferences Boolean
