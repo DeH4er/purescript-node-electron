@@ -34,6 +34,14 @@ type BrowserWindow = Record (webContents :: WebContents.WebContents, id :: Int)
 -- | `BrowserWindow`.
 data BrowserWindowOptions
 
+data WebPreferences
+
+webPreferences :: Options.Option BrowserWindowOptions WebPreferences
+webPreferences = Options.opt "webPreferences"
+
+nodeIntegration :: Options.Option WebPreferences Boolean
+nodeIntegration = Options.opt "nodeIntegration"
+
 -- | The width in pixels of the new window.
 width :: Options.Option BrowserWindowOptions Int
 width = Options.opt "width"
@@ -49,6 +57,7 @@ showOpt = Options.opt "show"
 -- | The background color of the new window.
 backgroundColor :: Options.Option BrowserWindowOptions String
 backgroundColor = Options.opt "backgroundColor"
+
 
 -- | Return an `Effect` containing a new `BrowserWindow`.
 foreign import createBrowserWindowImpl
