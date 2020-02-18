@@ -15,6 +15,8 @@ module Node.Electron.BrowserWindow
   , show
   , onShow
   , focusedWindow
+  , nodeIntegration
+  , webPreferences
   ) where
 
 import Prelude
